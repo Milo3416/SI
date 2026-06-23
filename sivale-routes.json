@@ -1,0 +1,124 @@
+{
+  "brand": "Up Si Vale",
+  "purpose": "URLs reales por etapa para tracking del journey con Digital User Tracking, Journey.pageview y Journey.record",
+  "search_query_parameter": "q",
+  "routes": [
+    {
+      "view": "home",
+      "url": "index.html",
+      "stage": "Inicio",
+      "primary_event": "Journey.pageview",
+      "intent": "explorar_prestaciones",
+      "score": "5",
+      "predictive_message": "Bienvenida de Sí Mon y horario de atención",
+      "predictive_trigger": "15s inactivity"
+    },
+    {
+      "view": "products",
+      "url": "productos.html",
+      "stage": "Productos",
+      "primary_event": "Journey.pageview",
+      "intent": "comparar_productos",
+      "score": "18",
+      "predictive_message": "Comparación de productos de vales",
+      "predictive_trigger": "10s dwell or scroll"
+    },
+    {
+      "view": "benefits",
+      "url": "vales-beneficios.html",
+      "stage": "Beneficios",
+      "primary_event": "Journey.pageview",
+      "intent": "beneficios_fiscales",
+      "score": "28",
+      "predictive_message": "Beneficios fiscales y experiencia del colaborador",
+      "predictive_trigger": "10s dwell or scroll"
+    },
+    {
+      "view": "acceptance",
+      "url": "comercios-afiliados.html",
+      "stage": "Red de aceptacion",
+      "primary_event": "Journey.pageview",
+      "intent": "buscar_comercios",
+      "score": "20",
+      "predictive_message": "Red de aceptación y comercios afiliados",
+      "predictive_trigger": "10s dwell or scroll"
+    },
+    {
+      "view": "quote",
+      "url": "cotizacion.html",
+      "stage": "Cotizacion",
+      "primary_event": "Journey.pageview",
+      "intent": "cotizar_prestaciones",
+      "score": "54",
+      "predictive_message": "Apoyo para cotización comercial",
+      "predictive_trigger": "10s dwell or scroll"
+    },
+    {
+      "view": "checkout",
+      "url": "checkout.html",
+      "stage": "Solicitud comercial",
+      "primary_event": "Journey.pageview",
+      "intent": "crear_oportunidad",
+      "score": "70",
+      "predictive_message": "Ayuda antes de enviar la solicitud",
+      "predictive_trigger": "10s dwell or scroll"
+    },
+    {
+      "view": "confirmation",
+      "url": "confirmacion.html",
+      "stage": "Conversion",
+      "primary_event": "Journey.pageview",
+      "intent": "solicitud_enviada",
+      "score": "90",
+      "predictive_message": "Próximos pasos de seguimiento",
+      "predictive_trigger": "10s dwell or scroll"
+    },
+    {
+      "view": "continuity",
+      "url": "continuidad.html",
+      "stage": "Continuidad asistida",
+      "primary_event": "Journey.pageview",
+      "intent": "recuperar_contexto",
+      "score": "62",
+      "predictive_message": "Recuperación de contexto para asesor",
+      "predictive_trigger": "10s dwell or scroll"
+    },
+    {
+      "view": "knowledge",
+      "url": "knowledge-portal.html?q=activar%20tarjeta",
+      "stage": "Knowledge Portal",
+      "primary_event": "Journey.pageview",
+      "intent": "buscar_conocimiento",
+      "score": "36",
+      "predictive_message": "Consulta de artículos en MEX_CS_SIVALE",
+      "predictive_trigger": "10s dwell or scroll"
+    }
+  ],
+  "genesys_pageview_attributes": [
+    "pageUrl",
+    "path",
+    "query",
+    "route",
+    "stage",
+    "segment",
+    "inferredIntent",
+    "journeyScore",
+    "product",
+    "employees",
+    "searchTerm",
+    "knowledgeBase"
+  ],
+  "predictive_engagement": {
+    "home_trigger": "15 seconds without interaction",
+    "secondary_page_trigger": "10 seconds dwell time, including scroll or fixed screen",
+    "event": "predictive_popup_shown",
+    "attributes": [
+      "inviteRoute",
+      "inviteTitle",
+      "inviteMessage",
+      "dwellSeconds",
+      "idleSeconds",
+      "userScrolledBeforePopup"
+    ]
+  }
+}

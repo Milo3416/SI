@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Knowledge Portal MEX_CS_SIVALE | Up Si Vale</title>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/portal.css">
+  <link rel="stylesheet" href="css/journey.css">
+  <script src="js/genesys-config.js"></script>
+</head>
+<body class="sv-route-page" data-route="knowledge">
+  <div class="sv-shell">
+    <header class="sv-header">
+      <div class="sv-header-inner">
+        <a class="sv-brand" href="index.html" data-track-label="Inicio"><img src="assets/000_Logo.svg" alt="Up Si Vale"><span>Knowledge Portal Genesys</span></a>
+        <nav class="sv-nav" aria-label="Navegacion principal">
+          <a href="productos.html">Productos</a>
+          <a href="vales-beneficios.html">Vales y beneficios</a>
+          <a href="comercios-afiliados.html">Comercios</a>
+          <a href="continuidad.html">Continuidad</a>
+          <a class="sv-cta" href="cotizacion.html" data-intent="cotizar_prestaciones">Cotizar</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="sv-main">
+      <section class="sv-hero">
+        <div>
+          <span class="sv-kicker">Base de conocimiento MEX_CS_SIVALE</span>
+          <h1>Portal conectado al Knowledge Portal real de Genesys Cloud.</h1>
+          <p>Esta version ya no usa respuestas locales simuladas. El area inferior contiene el div oficial <strong>genesys-support-center</strong> para que Genesys renderice las respuestas de la base de conocimiento configurada en tu Messenger.</p>
+          <form class="sv-search" data-form-type="knowledge_search" role="search" aria-label="Registrar busqueda para Digital User Tracking">
+            <input name="q" autocomplete="off" placeholder="Ej. consultar saldo, activar tarjeta, beneficios fiscales">
+            <button type="submit">Registrar busqueda</button>
+          </form>
+          <p class="sv-note">En Genesys Cloud, configura el parametro de busqueda como <strong>q</strong>. Si escribes aqui, la URL queda como <strong>?q=termino</strong> para que Digital User Tracking lo identifique.</p>
+        </div>
+        <aside class="sv-hero-card">
+          <h2>Checklist</h2>
+          <div class="sv-metric"><div class="sv-metric-icon">✅</div><div><strong>Knowledge Portal activo</strong><span>Configuracion con base MEX_CS_SIVALE.</span></div></div>
+          <div class="sv-metric"><div class="sv-metric-icon">🔎</div><div><strong>Parametro q</strong><span>Busqueda rastreable por URL.</span></div></div>
+          <div class="sv-metric"><div class="sv-metric-icon">💬</div><div><strong>Bot / agente</strong><span>Messenger se abre con el deployment de Si Vale.</span></div></div>
+        </aside>
+      </section>
+
+      <section class="sv-layout">
+        <div>
+          <section class="sv-panel">
+            <span class="sv-status">Render oficial de Genesys</span>
+            <h2>Respuestas desde Knowledge Workbench</h2>
+            <p class="sv-note">Si el deployment, dominio y configuracion estan correctos, aqui debe aparecer el portal oficial con busqueda, categorias y articulos de la base MEX_CS_SIVALE.</p>
+            <div id="genesys-support-center" class="sv-support-center"></div>
+            <p class="sv-note">Si esta caja queda vacia, valida que el Messenger Deployment este activo, que la configuracion asignada tenga Knowledge Portal habilitado, que el dominio donde publiques esta demo este permitido y que la base tenga articulos publicados.</p>
+          </section>
+        </div>
+        <aside class="sv-side">
+          <section class="sv-side-card">
+            <h2>Eventos capturados</h2>
+            <div class="sv-feed" id="journeyFeed">
+              <div class="sv-feed-item"><strong>Knowledge Portal</strong><span>MEX_CS_SIVALE · self_service</span></div>
+            </div>
+          </section>
+          <section class="sv-side-card" style="margin-top:18px">
+            <h2>¿Necesitas conversacion?</h2>
+            <p class="sv-note">El banner predictivo se dispara al centro despues de 15 segundos de inactividad. Tambien puedes abrir Messenger manualmente.</p>
+            <button class="sv-btn-secondary" type="button" data-intent="hablar_con_agente" onclick="window.SivaleDemoTracking&&window.SivaleDemoTracking.openMessenger()">Abrir Messenger</button>
+          </section>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <section id="predictiveInvite" class="predictive-invite" aria-live="polite" aria-label="Invitacion Predictive Engagement">
+    <button id="predictiveClose" class="predictive-invite__close" aria-label="Cerrar">×</button>
+    <div class="predictive-invite__top">
+      <div class="predictive-invite__avatar">💬</div>
+      <div>
+        <p class="predictive-invite__title">¿Te conecto con la base MEX_CS_SIVALE?</p>
+        <p class="predictive-invite__subtitle">Asistente virtual Up Si Vale</p>
+      </div>
+    </div>
+    <div class="predictive-invite__body">
+      <p>Puedo iniciar una conversacion con el bot y continuar con el tema que estas consultando en el portal.</p>
+      <div class="predictive-invite__actions">
+        <button id="predictiveAccept" class="predictive-invite__primary">Comenzar conversacion</button>
+        <button id="predictiveDismiss" class="predictive-invite__secondary">Ahora no</button>
+      </div>
+    </div>
+  </section>
+  <button id="predictiveLauncher" class="predictive-launcher" aria-label="Abrir bot">💬</button>
+  <div class="sv-track-ribbon"><strong>Knowledge Portal</strong><span>Div oficial: genesys-support-center · KB: MEX_CS_SIVALE</span></div>
+
+  <script src="js/genesys-tracking.js" defer></script>
+</body>
+</html>
